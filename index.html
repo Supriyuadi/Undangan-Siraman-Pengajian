@@ -6,13 +6,14 @@
 
         <link rel="stylesheet" href="dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
-        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&amp;family=Great+Vibes&amp;family=Open+Sans:wght@300;400&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Great+Vibes&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
         <title>Undangan Siraman & Pengajian</title>
     </head>
     <body>
         <main role="main">
-            <section class="landing">
+            <section class="landing" id="landing">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 text-center">
@@ -21,11 +22,31 @@
                                     <h1>Undangan<br/>Siraman & Pengajian</h1>
                                     <div class="banner-text d-grid justify-content-center">
                                         <span class="banner-text_date">
-                                            <h6>26 Oktober 2024</h6>
+                                            <h6>Sabtu, 26 Oktober 2024</h6>
                                         </span>
-                                        <span class="banner-text_address">
-                                            <h4>Kampung Sawah, BSD</h4>
-                                        </span>
+                                        <div class="banner-text_countdown">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <span class="countdown" id="countdown_days">10</span><br/>Hari
+                                                </div>
+                                                <div class="col-3">
+                                                    <span class="countdown" id="countdown_hours">10</span><br/>Jam
+                                                </div>
+                                                <div class="col-3">
+                                                    <span class="countdown" id="countdown_minutes">10</span><br/>Menit
+                                                </div>
+                                                <div class="col-3">
+                                                    <span class="countdown" id="countdown_seconds">10</span><br/>Detik
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="banner-text_button">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <span id="openInvitation"><i class="fa-regular fa-envelope-open"></i> Buka Undangan</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -33,17 +54,20 @@
                     </div>
                 </div>
             </section>
-            <section class="invitation">
+            <section class="invitation content-show" id="invitation" style="display: none;">
                 <div class="container display-t">
-                    <div class="row">
-                        <div class="col-12 text-center heading">
+                    <div class="row fadeIn-animation">
+                        <div class="col-12 text-center banner-text_invitation">
                             <h2>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</h2>
                             <p>Assalamu’alaikum Wr. Wb.</p>
+                            <p class="text">Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam acara Siraman dan Pengajian  yang akan kami selenggarakan dalam rangka menyambut hari bahagia pernikahan putri kami:</p>
+                            <h4 class="playwrite-au-qld">Tiara Intan Septi Handayani</h4>
+                            <p class="font-14">Putri pertama Alm. H. Agus Mulyana & Lisda Mutiara</p>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="date">
+            <section class="date content-show" style="display: none;">
                 <div class="container display-t">
                     <div class="row justify-content-center">
                         <div class="col-12 text-center heading">
@@ -51,15 +75,31 @@
                         </div>
                         <div class="col-10 text-center banner-text_schedule">
                             <h1 class="great-vibes">Siraman</h1>
-                            <span>MINGGU</span><br/>
+                            <span>SABTU</span><br/>
                             <h1>26</h1>
                             <span>Oktober 2024</span>
                             <div class="row justify-content-center">
                                 <div class="col-10 border-t">
                                     <span>Jam 08.00 s/d selesai</span>
                                 </div>
-                                <div class="col-10 detail-address">
-                                    <span>Gg. Kemboja, Lengkong Kulon, Kec. Pagedangan, Kabupaten Tangerang, Banten 15331</span>
+                            </div>
+                        </div>
+                        <div class="col-10 text-center banner-text_schedule margin-top">
+                            <h1 class="great-vibes">Pengajian</h1>
+                            <span>SABTU</span><br/>
+                            <h1>26</h1>
+                            <span>Oktober 2024</span>
+                            <div class="row justify-content-center">
+                                <div class="col-10 border-t">
+                                    <span>Jam 14.00 s/d selesai</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-10 text-center banner-text_schedule margin-top">
+                            <h1 class="great-vibes">Alamat</h1>
+                            <div class="row justify-content-center">
+                                <div class="col-10">
+                                    <span>Jln. Kp. Sawah RT.03, RW.03 No.35,<br/>Gg. Kemboja, Lengkong Kulon, Kec. Pagedangan, Kabupaten Tangerang</span>
                                 </div>
                             </div>
                             <div class="embed-responsive embed-responsive-4by3 embed-maps">
@@ -70,35 +110,47 @@
                 </div>
             </section>
         </main>
-    <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("Oct 26, 2024 08:00:00").getTime();
-        
-        // Update the count down every 1 second
-        var x = setInterval(function() {
-        
-        // Get today's date and time
-        var now = new Date().getTime();
-        
-        // Find the distance between now and the count down date
-        var distance = countDownDate - now;
-        
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-        // Display the result in the element with id="demo"
-        document.getElementById("countdown").innerHTML = days + " hari - " + hours + " jam "
-        + minutes + " menit";
-        
-        // If the count down is finished, write some text
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
-        }
-        }, 1000);
-    </script>
+        <script src="dist/js/jquery-3.7.1.min.js"></script>
+        <script src="dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("Oct 26, 2024 08:00:00").getTime();
+            
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+            
+            // Get today's date and time
+            var now = new Date().getTime();
+            
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+            
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Display the result in the element with id="demo"
+            document.getElementById("countdown_days").innerHTML = days;
+            document.getElementById("countdown_hours").innerHTML = hours;
+            document.getElementById("countdown_minutes").innerHTML = minutes;
+            document.getElementById("countdown_seconds").innerHTML = seconds;
+            
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+            }, 1000);
+
+            $("#openInvitation").click(function() {
+                $(".content-show").css("display", "block");
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#invitation").offset().top
+                }, 1000);
+                $("#openInvitation").css("display", "none")
+            });
+        </script>
     </body>
 </html>

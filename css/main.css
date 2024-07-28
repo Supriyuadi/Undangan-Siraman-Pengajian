@@ -1,11 +1,11 @@
-main {
+/* main {
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
 main section {
     scroll-snap-align: start;
-}
+} */
 section {
     height: 100vh;
     background-repeat: no-repeat;
@@ -58,9 +58,20 @@ section {
         opacity: 1;
     }
 }
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
   
 .fadeInUp-animation {
-animation: 2s fadeInUp;
+    animation: 2s fadeInUp;
+}
+.fadeIn-animation {
+    animation: 2s fadeIn;
 }
 .display-tc h1 {
     margin: 0;
@@ -83,6 +94,9 @@ animation: 2s fadeInUp;
     line-height: 43px;
     position: relative;
 }
+.banner-text_date h6 {
+    margin-top: 80px;
+}
 .banner-text_address {
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
@@ -90,9 +104,30 @@ animation: 2s fadeInUp;
     line-height: 43px;
     position: relative;
 }
+.banner-text_countdown {
+    border-top: 2px solid #b7aa75;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+.banner-text_countdown .countdown {
+    font-size: 24px;
+}
 .banner-text_schedule {
     border: 2px solid #b7aa75;
     padding: 20px 0;
+}
+.banner-text_button {
+    margin-top: 50px;
+}
+.banner-text_button span {
+    background: #000;
+    color: #b7aa75;
+    border-radius: 7px;
+    padding: 10px 15px 12px 15px;
+    font-weight: 700;
+}
+.margin-top {
+    margin-top: 20px;
 }
 .banner-text_schedule h1 {
     margin: 0;
@@ -111,4 +146,22 @@ animation: 2s fadeInUp;
 
 .great-vibes {
     font-family: "Great Vibes", cursivel;
+}
+.playwrite-au-qld {
+    font-family: "Playwrite AU QLD", cursive;
+}
+.font-14 {
+    font-size: 14px;
+}
+.banner-text_invitation .text {
+    padding: 20px 0;
+}
+.banner-text_invitation h4 {
+    border-bottom: 2px solid #b7aa75;
+    padding-bottom: 12px;
+}
+
+
+.modal-backdrop{
+    opacity:0 !important;
 }
