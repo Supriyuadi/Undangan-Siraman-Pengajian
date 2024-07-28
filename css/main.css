@@ -21,6 +21,8 @@ section {
     background-image: url(../images/invitation-bg.jpg);
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
+    overflow: auto;
 }
 .display-t {
   display: -webkit-box;
@@ -33,6 +35,19 @@ section {
       -ms-flex-align: end;
           align-items: center;
   height: 100vh;
+  padding-bottom: 80px;
+}
+.display-t-over {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: center;
+  height: 120vh;
   padding-bottom: 80px;
 }
 .display-grid {
@@ -153,15 +168,30 @@ section {
 .font-14 {
     font-size: 14px;
 }
+.banner-text_invitation h2 {
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 60px;
+}
 .banner-text_invitation .text {
     padding: 20px 0;
 }
-.banner-text_invitation h4 {
+.banner-text_invitation h5 {
     border-bottom: 2px solid #b7aa75;
     padding-bottom: 12px;
 }
-
-
-.modal-backdrop{
-    opacity:0 !important;
+#openDirection {    
+    background: #000;
+    color: #b7aa75;
+    border-radius: 7px;
+    padding: 10px 15px 12px 15px;
+    font-weight: 700;
+}
+.padding-b-20 {
+    padding-bottom: 20px;
+}
+.audio-player {
+    position: fixed;
+    bottom: 80px;
+    left: 6px;
+    font-size: 24px;
 }
