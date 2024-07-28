@@ -129,7 +129,7 @@
                     <div id="pause" style="display: none;"><i class="fa-sharp fa-solid fa-circle-pause"></i></div>
                 </div>
             </section>
-            <audio src="audio/background-music.weba" id="backgroundAudio"></audio>
+            <audio src="audio/background-music.mp3" id="backgroundAudio"></audio>
         </main>
         <script src="dist/js/jquery-3.7.1.min.js"></script>
         <script src="dist/js/bootstrap.bundle.min.js"></script>
@@ -174,7 +174,7 @@
                 }, 1000);
                 $("#openInvitation").css("display", "none");
                 $("#pause").css("display", "block");
-                // x.play();
+                x.play();
             });
             $("#pause").click(function() {
                 $("#pause").css("display", "none");
