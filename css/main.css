@@ -174,11 +174,12 @@ section {
 }
 .banner-text_invitation .text {
     padding: 20px 0;
+    margin: 0;
 }
 .banner-text_invitation h6 {
+    font-weight: 600;
     border-bottom: 2px solid #b7aa75;
     padding-bottom: 12px;
-    font-weight: 600;
 }
 #openDirection {    
     background: #000;
@@ -195,4 +196,33 @@ section {
     bottom: 80px;
     left: 6px;
     font-size: 24px;
+}
+.photos {
+    margin-bottom: 20px;
+}
+.photos .name {
+    text-align: left;
+    padding: 0;
+}
+.photos .name .border-c {
+    height: 10px;
+    border-bottom: 2px solid #b7aa75 !important;
+    margin-left: -15px;
+    margin-bottom: 10px;
+}
+.border-center {
+    width: 100%;
+    position: relative;
+}
+.border-center:before {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    border-bottom: 2px #b7aa75 solid;
+    width: 100%;
+    z-index:0;
+}
+.photos-img {
+    border-radius: 16px;
+    box-shadow: 0 6px 6px hsl(0deg 0% 0% / 0.3);
 }
